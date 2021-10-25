@@ -1,0 +1,31 @@
+import gifAnimation.*;
+PImage igloo;
+PImage firePlace;
+PImage iceCube;
+PImage ice;
+PVector p1, p2;
+float speedX1, speedX2;
+float mouseX, mouseY;
+
+void setup(){ 
+  size(800,600);
+  
+   ice=loadImage("data/ice.GIF");
+   iceCube= loadImage("data/iceCube.png");
+   firePlace= loadImage ("data/firePlace.png");
+   igloo =loadImage("data/igloo.png");
+   iceCube.resize(width,height);
+   firePlace.resize(width,height);
+   igloo.resize(width,height);
+
+}
+
+void draw(){
+
+  background(firePlace);
+  if (mousePressed){
+    background(igloo);
+ };
+  imageMode(CENTER);
+image(ice,600,400,150,150);
+};
